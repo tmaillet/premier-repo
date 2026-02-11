@@ -1,1 +1,5 @@
-#menu { background-color: palegreen; color: white; }
+#menu {
+  background-color: palegreen;
+  color: white;
+  padding: 10px;
+}
