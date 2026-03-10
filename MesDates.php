@@ -1,5 +1,7 @@
 <?php
 
+namespace Exercice;
+
 /**
  * Classe MesDates pour l'exercice du TD5.
  */
@@ -12,7 +14,7 @@ class MesDates
      */
     public function demain(): string
     {
-        $date = new DateTime('tomorrow');
+        $date = new \DateTime('tomorrow');
         return json_encode([
             'demain' => $date->format('d-m-Y')
         ]);
