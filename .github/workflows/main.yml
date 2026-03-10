@@ -1,5 +1,8 @@
 name: Action Mes Dates
-on: [push]
+on: 
+  push:
+  pull_request:
+    branches: [ "master", "main" ]
 jobs:
   job-exercice:
     runs-on: ubuntu-latest
