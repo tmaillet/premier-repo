@@ -1,4 +1,3 @@
-cat <<EOF > .github/workflows/main.yml
 name: Action Mes Dates
 on: [push, pull_request]
 
@@ -8,4 +7,3 @@ jobs:
     steps:
       - name: Afficher les fichiers
         run: ls -R
-EOF
