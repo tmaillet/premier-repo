@@ -3,7 +3,7 @@ name: Action Mes Dates
 on: [push, pull_request]
 
 jobs:
-  job-ls:
+  job-exercice:
     runs-on: ubuntu-latest
     steps:
       - name: Afficher les fichiers
