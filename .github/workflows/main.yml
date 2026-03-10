@@ -4,9 +4,9 @@ jobs:
   job-exercice:
     runs-on: ubuntu-latest
     steps:
-      - name: 1. Afficher les fichiers AVANT checkout
-        run: ls -R
-      - name: 2. Recuperer le code (checkout)
+      - name: Checkout du depot
         uses: actions/checkout@v4
-      - name: 3. Afficher les fichiers APRES checkout
-        run: ls -R
+      - name: Installation PHPCS
+        run: sudo apt-get update && sudo apt install -y php-codesniffer
+      - name: Verification de la norme (Lint)
+        run: phpcs --standard=PSR12 MesDates.php
