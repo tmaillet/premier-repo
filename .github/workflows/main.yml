@@ -1,10 +1,11 @@
 cat <<EOF > .github/workflows/main.yml
 name: Action Mes Dates
-on: [push]
+on: [push, pull_request]
+
 jobs:
-  job-exercice:
+  job-ls:
     runs-on: ubuntu-latest
     steps:
-      - name: Afficher les fichiers (ls)
+      - name: Afficher les fichiers
         run: ls -R
 EOF
