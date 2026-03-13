@@ -12,4 +12,4 @@ jobs:
       - name: Installation PHPCS
         run: sudo apt-get update && sudo apt install -y php-codesniffer
       - name: Verification de la norme (Lint)
-        run: phpcs --standard=PSR12 MesDates.php
+        run: phpcs --standard=PSR12 src/MesDates.php
