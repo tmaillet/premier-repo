@@ -1,0 +1,15 @@
+name: Action Mes Dates
+on: 
+  push:
+  pull_request:
+    branches: [ "master", "main" ]
+jobs:
+  job-exercice:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du depot
+        uses: actions/checkout@v4
+      - name: Installation PHPCS
+        run: sudo apt-get update && sudo apt install -y php-codesniffer
+      - name: Verification de la norme (Lint)
+        run: phpcs --standard=PSR12 MesDates.php
