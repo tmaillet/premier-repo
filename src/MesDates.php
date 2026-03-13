@@ -2,11 +2,21 @@
 
 namespace Exercice;
 
+/**
+ * Classe MesDates pour l'exercice du TD5.
+ */
 class MesDates
 {
-    public function demain()
+    /**
+     * Retourne la date de demain au format JSON.
+     *
+     * @return string
+     */
+    public function demain(): string
     {
-        $demain = (new \DateTime('tomorrow'))->format('d-m-Y');
-        return json_encode(['demain' => $demain]);
+        $date = new \DateTime('tomorrow');
+        return json_encode([
+            'demain' => $date->format('d-m-Y')
+        ]);
     }
 }
