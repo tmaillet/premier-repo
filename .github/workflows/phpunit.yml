@@ -1,6 +1,9 @@
 name: PHPUnit Tests
 on: [push, pull_request]
 
+permissions:
+  contents: write
+
 jobs:
   tests:
     runs-on: ubuntu-latest
@@ -19,8 +22,9 @@ jobs:
       - name: Run Tests with Coverage HTML
         run: ./vendor/bin/phpunit --coverage-html html-report
 
-      - name: Archive Code Coverage Results
-        uses: actions/upload-artifact@v4
+      - name: Deploy Coverage to GitHub Pages
+        if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/mes-dates'
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: code-coverage-report
-          path: html-report/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./html-report
