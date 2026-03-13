@@ -17,4 +17,4 @@ jobs:
         run: composer install
 
       - name: Run Tests with Coverage
-        run: ./vendor/bin/phpunit tests --coverage-text
+        run: ./vendor/bin/phpunit --coverage-text
