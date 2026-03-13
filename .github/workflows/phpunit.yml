@@ -16,5 +16,11 @@ jobs:
       - name: Install Dependencies
         run: composer install
 
-      - name: Run Tests with Coverage
-        run: ./vendor/bin/phpunit --coverage-text
+      - name: Run Tests with Coverage HTML
+        run: ./vendor/bin/phpunit --coverage-html html-report
+
+      - name: Archive Code Coverage Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: code-coverage-report
+          path: html-report/
