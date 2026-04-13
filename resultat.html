@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultat</title>
+</head>
+<body>
+    <h1>Nom saisi :</h1>
+    <div id="resultat" style="font-size: 24px; font-weight: bold;"></div>
+
+    <script>
+        // Ce script récupère le nom dans l'URL et le met en majuscules
+        const params = new URLSearchParams(window.location.search);
+        const nom = params.get('nom');
+        if (nom) {
+            document.getElementById('resultat').innerText = nom.toUpperCase();
+        }
+    </script>
+    <br>
+    <a href="index.html">Retour au formulaire</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "exercice",
+  "version": "1.0.0",
+  "description": "<img width=\"1277\" height=\"334\" alt=\"Image\" src=\"https://github.com/user-attachments/assets/562ad079-fb5b-4e49-90cb-cea93d739f7c\" />",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmaillet/premier-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tmaillet/premier-repo/issues"
+  },
+  "homepage": "https://github.com/tmaillet/premier-repo#readme",
+  "devDependencies": {
+    "testcafe": "^3.7.4"
+  }
+}
